@@ -95,7 +95,7 @@ SIXTRL_INLINE int NS(Track_particle_multipole)(
         dpx += hxl + hxl * delta;
         dpy -= hyl + hyl * delta;
 
-        if( length > ZERO )
+        if( (length > ZERO) | (length < ZERO) )
         {
             real_t const b1l = chi * NS(Multipole_bal)( mp, 0 );
             real_t const a1l = chi * NS(Multipole_bal)( mp, 1 );
